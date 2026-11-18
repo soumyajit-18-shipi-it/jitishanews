@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-paper-cream: #F5F0E5;
+    --color-paper-white: #FFFDF7;
+    --color-ink-black: #242321;
+    --color-muted-rose: #C98591;
+    --color-dusty-lavender: #A99ABB;
+    --color-deep-plum: #49364C;
+    --color-soft-peach: #EBCDBB;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-paper-cream);
+    color: var(--color-ink-black);
+    font-family: 'Libre Baskerville', 'Lora', Georgia, serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(201, 133, 145, 0.3);
+    color: #242321;
+  }
+}
+
+/* Authentic Newspaper Typography */
+.font-headline {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-body-news {
+  font-family: 'Libre Baskerville', 'Lora', Georgia, serif;
+}
+
+.font-meta {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.font-handwriting {
+  font-family: 'Parisienne', 'Alex Brush', cursive;
+}
+
+/* Subtle Newsprint Texture & Border Rules */
+.bg-newsprint {
+  background-color: #F5F0E5;
+  background-image:
+    radial-gradient(#242321 0.35px, transparent 0.35px),
+    radial-gradient(#C98591 0.25px, #F5F0E5 0.25px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.news-double-border {
+  border-top: 3px double #242321;
+  border-bottom: 3px double #242321;
+}
+
+.news-thin-border {
+  border-color: rgba(36, 35, 33, 0.25);
+}
+
+/* Paper Crease / Fold Shadow Effects */
+.paper-crease-shadow {
+  box-shadow:
+    inset 0 10px 15px -10px rgba(0, 0, 0, 0.08),
+    inset 0 -10px 15px -10px rgba(0, 0, 0, 0.08),
+    0 10px 25px -5px rgba(36, 35, 33, 0.08);
+}
+
+.paper-sheet-shadow {
+  box-shadow: 0 10px 30px -5px rgba(36, 35, 33, 0.12), 0 0 1px 1px rgba(36, 35, 33, 0.05);
+}
+
+/* Custom Scrollbar for Newspaper Edition */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F0E5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C98591;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #49364C;
+}
